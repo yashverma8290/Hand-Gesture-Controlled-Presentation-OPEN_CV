@@ -3,14 +3,15 @@ import cv2
 import numpy as np
 from cvzone.HandTrackingModule import HandDetector
 #vairables
-width,height=600,400
+width,height=960,500
 folderPath="pictures"
 #camera setup
 cap=cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
-# cap.set(3,width)
-# cap.set(4,height)
+
+cap.set(3,width)
+cap.set(4,height)
 
 #Get the list of presentation images
 pathImages=sorted(os.listdir(folderPath),key=len)
